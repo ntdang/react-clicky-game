@@ -1,19 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import FriendCard from "./components/FriendCard";
+import Nav from "./components/Nav";
+import Wrapper from "./components/Wrapper";
+import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Wrapper>
+      <FriendCard
+        name={friends[0].name}
+        image={friends[0].image}
+        occupation={friends[0].occupation}
+        location={friends[0].location}
+      />
+      <FriendCard
+        name={friends[1].name}
+        image={friends[1].image}
+        occupation={friends[1].occupation}
+        location={friends[1].location}
+      />
+      <FriendCard
+        name={friends[2].name}
+        image={friends[2].image}
+        occupation={friends[2].occupation}
+        location={friends[2].location}
+      />
+    </Wrapper>
     );
   }
 }
