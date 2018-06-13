@@ -37,7 +37,7 @@ class App extends Component {
     }
   };
 
-  // handleIncrement increments this.state.count by 1
+  // handleIncrement increments this.state.currentScore by 1
   handleIncrement = () => {
     const newScore = this.state.currentScore + 1;
     this.setState({
@@ -58,7 +58,7 @@ class App extends Component {
     this.setState({
       currentScore: 0,
       topScore: this.state.topScore,
-      message: "Oh no! You already caught this one!",
+      message: "Oh no! Already caught this one!",
       clicked: []
     });
     this.handleShuffle();
@@ -80,7 +80,7 @@ class App extends Component {
         />
 
         <Title>
-          Try to catch 'em all! But don't catch the same one twice or you'll lose!
+          Try to catch 'em all! But you can't catch the same one twice!
         </Title>
 
         <Container>
