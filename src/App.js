@@ -58,7 +58,7 @@ class App extends Component {
     this.setState({
       currentScore: 0,
       topScore: this.state.topScore,
-      message: "Oh no! Already caught this one!",
+      message: "Oh no! Already caught!",
       clicked: []
     });
     this.handleShuffle();
