@@ -86,14 +86,13 @@ class App extends Component {
         <Container>
           <Row>
             {this.state.friends.map(friend => (
-              <Column size="md-3 sm-6">
+              <Column size="md-3 sm-6" key={friend.id}>
                 <FriendCard
-                  key={friend.id}
+                  id={friend.id}
                   handleClick={this.handleClick}
                   handleIncrement={this.handleIncrement}
                   handleReset={this.handleReset}
                   handleShuffle={this.handleShuffle}
-                  id={friend.id}
                   image={friend.image}
                 />
               </Column>
